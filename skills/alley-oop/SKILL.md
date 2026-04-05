@@ -112,10 +112,18 @@ If `ALLEY_OOP_MOST_RECENT.md` doesn't exist, tell the user and stop.
 
 ## /alleyarchive — Write Timestamped Archive Handoff
 
-1. Get the current timestamp in format `YYYY-MM-DD_HH-MM`
-2. Write the handoff to `.claude/alley-oop/archive/<timestamp>.md`
-3. **Do not** touch `ALLEY_OOP_MOST_RECENT.md`
-5. Confirm to the user:
+1. Ask the user if they have any specific instructions for the handoff document:
+   ```
+   Any specific instructions for the handoff? (or press Enter to skip)
+   ```
+   Wait for their response. If they provide instructions, incorporate them when writing
+   the handoff. If they say nothing or skip, proceed normally.
+2. Get the current timestamp in format `YYYY-MM-DD_HH-MM`
+3. Write the handoff to `.claude/alley-oop/archive/<timestamp>.md`
+   - If the user provided special instructions, include them as a `Special Instructions:` field near the top of the document (after any Goal/title line)
+4. **Do not** touch `ALLEY_OOP_MOST_RECENT.md`
+5. Delete any files in `.claude/alley-oop/archive/` older than 30 days (based on filename timestamp)
+6. Confirm to the user:
    - The archive filename it was saved to
    - A one-line summary of what was captured
    - That they can retrieve it with `/ooparchive`
@@ -132,11 +140,15 @@ If `ALLEY_OOP_MOST_RECENT.md` doesn't exist, tell the user and stop.
 Available handoffs:
 
   1. 2026-04-05_14-32 — Refactor auth middleware to support OAuth
+     Instructions: focus on the token expiry edge case
   2. 2026-04-05_09-15 — Build out dashboard chart components
   3. 2026-04-04_17-44 — Debug payment webhook timeout issue
+     Instructions: skip the retry logic, just document the issue
 
 Which one? (enter a number)
 ```
+
+When reading each file for the preview, also check for a `Special Instructions:` field and include it indented below the entry if present. Omit the instructions line entirely if none were given.
 
 4. Once the user picks one, read that file and follow the same `/oop` flow:
    targeted reads only, propose an action plan, wait for confirmation.

@@ -18,11 +18,14 @@ Follow the alley-oop skill instructions to:
 Available handoffs:
 
   1. 2026-04-05_14-32 — <goal preview>
+     Instructions: <special instructions if present>
   2. 2026-04-05_09-15 — <goal preview>
   3. 2026-04-04_17-44 — <goal preview>
+     Instructions: <special instructions if present>
 
 Which one? (enter a number)
 ```
+Omit the Instructions line entirely for entries that have none.
 
 4. Once the user picks, read that full file and follow the /resume flow:
    - Do only targeted file reads the handoff explicitly points you to
