@@ -79,10 +79,10 @@ Choose what's relevant. Not every section applies every time.
 
 1. Ask the user if they have any specific instructions for the handoff document:
    ```
-   Any specific instructions for the handoff? (or press Enter to skip)
+   Any specific instructions for the handoff? (or type 'n' to skip)
    ```
    Wait for their response. If they provide instructions, incorporate them when writing
-   the handoff. If they say nothing or skip, proceed normally.
+   the handoff. If they type 'n', proceed normally without any instructions.
 2. Write the handoff to `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md` (overwrite)
    - If the user provided special instructions, include them as a `Special Instructions:` field near the top of the document (after any Goal/title line)
 3. Confirm to the user:
@@ -123,10 +123,10 @@ If `ALLEY_OOP_MOST_RECENT.md` doesn't exist, tell the user and stop.
 
 1. Ask the user if they have any specific instructions for the handoff document:
    ```
-   Any specific instructions for the handoff? (or press Enter to skip)
+   Any specific instructions for the handoff? (or type 'n' to skip)
    ```
    Wait for their response. If they provide instructions, incorporate them when writing
-   the handoff. If they say nothing or skip, proceed normally.
+   the handoff. If they type 'n', proceed normally without any instructions.
 2. Get the current timestamp in format `YYYY-MM-DD_HH-MM`
 3. Write the handoff to `.claude/alley-oop/archive/<timestamp>.md`
    - If the user provided special instructions, include them as a `Special Instructions:` field near the top of the document (after any Goal/title line)

@@ -12,7 +12,7 @@
       "name": "alley-oop",
       "description": "Token-efficient session handoffs for Claude Code. Wrap up a session with a tight cold-start prompt, resume in a fresh session without dragging in old context.",
       "source": "./",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "author": {
         "name": "Alazar Abebe",
         "email": "aabebe@clearwaveinc.com"

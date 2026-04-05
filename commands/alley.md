@@ -12,11 +12,11 @@ Follow the alley-oop skill instructions to:
    Use this exact prompt:
 
 ```
-Any specific instructions for the handoff? (or press Enter to skip)
+Any specific instructions for the handoff? (or type 'n' to skip)
 ```
 
    Wait for their response. If they provide instructions, incorporate them when writing
-   the handoff. If they say nothing or skip, proceed normally.
+   the handoff. If they type 'n', proceed normally without any instructions.
 
 2. Write a concise cold-start handoff document to `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md`
    Create the `.claude/alley-oop/` directory if it doesn't exist. Overwrite any existing file.

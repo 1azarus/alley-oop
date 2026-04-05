@@ -12,11 +12,11 @@ Follow the alley-oop skill instructions to:
    Use this exact prompt:
 
 ```
-Any specific instructions for the handoff? (or press Enter to skip)
+Any specific instructions for the handoff? (or type 'n' to skip)
 ```
 
    Wait for their response. If they provide instructions, incorporate them when writing
-   the handoff. If they say nothing or skip, proceed normally.
+   the handoff. If they type 'n', proceed normally without any instructions.
 
 2. Get the current timestamp in format `YYYY-MM-DD_HH-MM`
 
