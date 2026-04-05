@@ -61,7 +61,7 @@ files stay local. If you want to commit handoffs for team continuity, remove
 ## Installation
 
 ```bash
-/plugin marketplace add YOUR-GITHUB-USERNAME/alley-oop
+/plugin marketplace add 1azarus/alley-oop
 /plugin install alley-oop@alley-oop
 ```
 
