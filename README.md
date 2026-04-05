@@ -1,4 +1,4 @@
-# Alley Oop 🏀
+# Alley Oop
 
 Token-efficient session handoffs for Claude Code.
 
