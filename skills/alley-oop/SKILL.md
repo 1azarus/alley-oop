@@ -77,8 +77,15 @@ Choose what's relevant. Not every section applies every time.
 
 ## /alley — Write Most Recent Handoff
 
-1. Write the handoff to `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md` (overwrite)
-2. Confirm to the user:
+1. Ask the user if they have any specific instructions for the handoff document:
+   ```
+   Any specific instructions for the handoff? (or press Enter to skip)
+   ```
+   Wait for their response. If they provide instructions, incorporate them when writing
+   the handoff. If they say nothing or skip, proceed normally.
+2. Write the handoff to `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md` (overwrite)
+   - If the user provided special instructions, include them as a `Special Instructions:` field near the top of the document (after any Goal/title line)
+3. Confirm to the user:
    - Where the file was saved
    - A one-line summary of what the next session will pick up from
    - The exact command to start fresh:
@@ -96,10 +103,12 @@ Next session, start with:
 
 1. Read `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md` — and **only** that file.
    Do not load previous conversation history. Do not scan the codebase speculatively.
-2. Do any minimal targeted reads the handoff points you to (e.g. if it says
+2. If the handoff contains a `Special Instructions:` field, honor it when forming
+   your action plan (e.g. skip certain steps, focus on specific areas, etc.).
+3. Do any minimal targeted reads the handoff points you to (e.g. if it says
    "see `src/auth.ts`", read that file).
-3. Present a short numbered **proposed action plan** derived from the handoff's next steps.
-4. Ask if the plan looks right, or if anything has changed since the handoff was written.
+4. Present a short numbered **proposed action plan** derived from the handoff's next steps.
+5. Ask if the plan looks right, or if anything has changed since the handoff was written.
 
 **Do not** summarize or repeat the handoff back to the user.
 **Do not** start executing until they confirm the plan.

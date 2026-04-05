@@ -8,10 +8,22 @@ You are wrapping up this Claude Code session using the Alley Oop skill.
 
 Follow the alley-oop skill instructions to:
 
-1. Write a concise cold-start handoff document to `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md`
-   Create the `.claude/alley-oop/` directory if it doesn't exist. Overwrite any existing file.
+1. Ask the user if they have any specific instructions for the handoff document.
+   Use this exact prompt:
 
-2. Confirm to the user with the file location, a one-line summary, and the next-session instructions:
+```
+Any specific instructions for the handoff? (or press Enter to skip)
+```
+
+   Wait for their response. If they provide instructions, incorporate them when writing
+   the handoff. If they say nothing or skip, proceed normally.
+
+2. Write a concise cold-start handoff document to `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md`
+   Create the `.claude/alley-oop/` directory if it doesn't exist. Overwrite any existing file.
+   If the user provided special instructions, include them as a `Special Instructions:` field
+   near the top of the document (after any Goal/title line).
+
+3. Confirm to the user with the file location, a one-line summary, and the next-session instructions:
 
 ```
 ✅ Handoff saved to .claude/alley-oop/ALLEY_OOP_MOST_RECENT.md

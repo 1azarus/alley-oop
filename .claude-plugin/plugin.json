@@ -1,7 +1,7 @@
 {
   "name": "alley-oop",
   "description": "Token-efficient session handoffs for Claude Code. Wrap up a session with a tight cold-start prompt, resume in a fresh session without dragging in old context.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Alley Oop"
   },
