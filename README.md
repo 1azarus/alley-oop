@@ -36,6 +36,7 @@ Session A:  do work → /passin
 Session B:  do work → /passin
 New session: /catchon → pick the one you want → confirm plan → do work
 ```
+Note: On execution of the /passin command all handoff documents older than one month will be deleted from the archive.
 
 ---
 
