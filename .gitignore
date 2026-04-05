@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Claude session handoff files (kept local by default)
+# Remove this if you want to commit handoffs for team continuity
+.claude/alley-oop/

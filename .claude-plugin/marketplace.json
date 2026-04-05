@@ -1,0 +1,27 @@
+{
+  "name": "alley-oop",
+  "owner": {
+    "name": "Alazar Abebe",
+    "email": "aabebe@clearwaveinc.com"
+  },
+  "metadata": {
+    "description": "Token-efficient session handoffs for Claude Code"
+  },
+  "plugins": [
+    {
+      "name": "alley-oop",
+      "description": "Token-efficient session handoffs for Claude Code. Wrap up a session with a tight cold-start prompt, resume in a fresh session without dragging in old context.",
+      "source": "./",
+      "version": "1.0.0",
+      "author": {
+        "name": "Alazar Abebe",
+        "email": "aabebe@clearwaveinc.com"
+      },
+      "homepage": "https://github.com/YOUR-GITHUB-USERNAME/alley-oop",
+      "repository": "https://github.com/YOUR-GITHUB-USERNAME/alley-oop",
+      "license": "MIT",
+      "keywords": ["session", "handoff", "context", "productivity", "token-efficient"],
+      "category": "productivity"
+    }
+  ]
+}
