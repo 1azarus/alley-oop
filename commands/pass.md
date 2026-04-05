@@ -2,7 +2,7 @@
 description: End this session and save a handoff to ALLEY_OOP_MOST_RECENT.md
 ---
 
-# /alley — End Session & Save Handoff
+# /pass — End Session & Save Handoff
 
 You are wrapping up this Claude Code session using the Alley Oop skill.
 
@@ -29,6 +29,6 @@ Any specific instructions for the handoff? (or type 'n' to skip)
 ✅ Handoff saved to .claude/alley-oop/ALLEY_OOP_MOST_RECENT.md
 
 Next session, start with:
-  /oop
+  /catch
 
 ```

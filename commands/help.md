@@ -9,8 +9,8 @@ Show the user this help summary and nothing else:
 ```
 Alley Oop — token-efficient session handoffs
 
-  /alley          End this session and save a handoff (solo workflow)
-  /oop            Start a new session from the latest handoff
-  /alleyarchive   End this session and save a timestamped handoff (parallel workflow)
-  /ooparchive     Pick a timestamped handoff from the archive and resume from it
+  /pass       End this session and save a handoff (solo workflow)
+  /catch      Start a new session from the latest handoff
+  /passin     End this session and save a timestamped handoff (parallel workflow)
+  /catchon    Pick a timestamped handoff from the archive and resume from it
 ```

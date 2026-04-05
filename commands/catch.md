@@ -2,7 +2,7 @@
 description: Start a fresh session from ALLEY_OOP_MOST_RECENT.md and propose an action plan
 ---
 
-# /oop — Resume from Most Recent Handoff
+# /catch — Resume from Most Recent Handoff
 
 You are starting a fresh Claude Code session using the Alley Oop skill.
 

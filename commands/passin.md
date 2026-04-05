@@ -2,7 +2,7 @@
 description: End this session and save a timestamped handoff to the archive
 ---
 
-# /alleyarchive — Save Timestamped Handoff to Archive
+# /passin — Save Timestamped Handoff to Archive
 
 You are saving an archived handoff for this Claude Code session using the Alley Oop skill.
 
@@ -30,4 +30,4 @@ Any specific instructions for the handoff? (or type 'n' to skip)
 5. Delete any files in `.claude/alley-oop/archive/` older than 30 days (based on filename timestamp)
 
 6. Confirm to the user with the archive filename, a one-line summary of what was captured,
-   and a note that they can retrieve it with `/ooparchive`
+   and a note that they can retrieve it with `/catchon`

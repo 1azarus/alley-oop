@@ -2,7 +2,7 @@
 name: alley-oop
 description: >
   Manages token-efficient session transitions in Claude Code. Use this skill whenever
-  the user runs /alley, /oop, /alleyarchive, or /ooparchive, or says anything like
+  the user runs /pass, /catch, /passin, or /catchon, or says anything like
   "wrap up the session", "end the session", "save a handoff", "start fresh",
   "pick up where we left off", or "the session is getting long". The handoff document
   is a cold-start prompt written TO a fresh Claude instance — not a history dump.
@@ -14,8 +14,8 @@ description: >
 ## Purpose
 
 Alley Oop enables clean, token-efficient transitions between Claude Code sessions.
-Instead of letting sessions grow until quality degrades, users `/alley` at any point
-to generate a tight handoff document, then `/oop` in a fresh session to pick up
+Instead of letting sessions grow until quality degrades, users `/pass` at any point
+to generate a tight handoff document, then `/catch` in a fresh session to pick up
 exactly where they left off — without reloading old context.
 
 ## Core Principle
@@ -31,10 +31,10 @@ Every line should earn its place by helping Claude act immediately and correctly
 All Alley Oop files live under `.claude/alley-oop/` in the project root.
 
 - **Most recent handoff:** `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md`
-  Used by `/alley` and `/oop`. One file, always overwritten.
+  Used by `/pass` and `/catch`. One file, always overwritten.
 
 - **Archive:** `.claude/alley-oop/archive/YYYY-MM-DD_HH-MM.md`
-  Used by `/alleyarchive` and `/ooparchive`. Never touched by `/alley`.
+  Used by `/passin` and `/catchon`. Never touched by `/pass`.
 
 Create `.claude/alley-oop/` and subdirectories if they don't exist.
 
@@ -42,7 +42,7 @@ Create `.claude/alley-oop/` and subdirectories if they don't exist.
 
 ## Writing a Good Handoff
 
-Used by both `/alley` and `/alleyarchive`. The content format is identical — only the
+Used by both `/pass` and `/passin`. The content format is identical — only the
 destination file differs.
 
 ### What to capture
@@ -75,7 +75,7 @@ Choose what's relevant. Not every section applies every time.
 
 ---
 
-## /alley — Write Most Recent Handoff
+## /pass — Write Most Recent Handoff
 
 1. Ask the user if they have any specific instructions for the handoff document:
    ```
@@ -94,12 +94,12 @@ Choose what's relevant. Not every section applies every time.
 ✅ Handoff saved to .claude/alley-oop/ALLEY_OOP_MOST_RECENT.md
 
 Next session, start with:
-  /oop
+  /catch
 ```
 
 ---
 
-## /oop — Start from Most Recent Handoff
+## /catch — Start from Most Recent Handoff
 
 1. Read `.claude/alley-oop/ALLEY_OOP_MOST_RECENT.md` — and **only** that file.
    Do not load previous conversation history. Do not scan the codebase speculatively.
@@ -119,7 +119,7 @@ If `ALLEY_OOP_MOST_RECENT.md` doesn't exist, tell the user and stop.
 
 ---
 
-## /alleyarchive — Write Timestamped Archive Handoff
+## /passin — Write Timestamped Archive Handoff
 
 1. Ask the user if they have any specific instructions for the handoff document:
    ```
@@ -135,11 +135,11 @@ If `ALLEY_OOP_MOST_RECENT.md` doesn't exist, tell the user and stop.
 6. Confirm to the user:
    - The archive filename it was saved to
    - A one-line summary of what was captured
-   - That they can retrieve it with `/ooparchive`
+   - That they can retrieve it with `/catchon`
 
 ---
 
-## /ooparchive — Pick and Resume from Archive
+## /catchon — Pick and Resume from Archive
 
 1. List all `.md` files in `.claude/alley-oop/archive/`, sorted newest first
 2. For each file, read just the **Goal** line (or first meaningful line) to use as preview
@@ -159,10 +159,10 @@ Which one? (enter a number)
 
 When reading each file for the preview, also check for a `Special Instructions:` field and include it indented below the entry if present. Omit the instructions line entirely if none were given.
 
-4. Once the user picks one, read that file and follow the same `/oop` flow:
+4. Once the user picks one, read that file and follow the same `/catch` flow:
    targeted reads only, propose an action plan, wait for confirmation.
 
-If the archive is empty, tell the user and suggest `/alleyarchive` for future sessions.
+If the archive is empty, tell the user and suggest `/passin` for future sessions.
 
 ---
 
